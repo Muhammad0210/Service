@@ -16,8 +16,6 @@ import java.util.*
 private const val TAG = "MyService"
 class MyService(context: Context, workerParameters: WorkerParameters) : Worker(context, workerParameters)  {
     override fun doWork(): Result {
-
-
         val date = SimpleDateFormat("dd.MM.yyyy HH:mm:ss").format(Date())
         Log.d(TAG, "doWork: $date")
 

@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.apply {
+            val myService = StackOverflowError("Erroring")
             btnStart.setOnClickListener {
                 val worker = PeriodicWorkRequestBuilder<MyService>(15, TimeUnit.MINUTES).build()
                 WorkManager.getInstance(this@MainActivity).enqueue(worker)
